@@ -1,0 +1,260 @@
+/* Estilos generales */
+body {
+    background: #000 !important;
+    font-family: 'Segoe UI', sans-serif;
+    padding-top: 76px; /* Para compensar la navbar fija */
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    text-shadow: 0 0 10px #ffc107;
+}
+
+/* Saludo dinámico */
+#saludoDinamico {
+    background: linear-gradient(90deg, #000, #1a1a1a, #000);
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cards */
+.card {
+    background: rgba(13, 13, 13, 0.9) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(194, 191, 180, 0.1);
+}
+
+/* Formulario */
+#formContacto .form-control {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border: 1px solid #ffc107 !important;
+}
+
+#formContacto .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(242, 242, 240, 0.25) !important;
+    border-color: #ffdb70 !important;
+}
+
+/* Contador */
+.display-contador {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ffc107;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+#numeroContador {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-shadow: 0 0 15px #ffc107;
+    transition: all 0.3s ease;
+}
+
+#numeroContador.animar {
+    animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Animaciones AOS */
+[data-aos] {
+    pointer-events: none;
+}
+
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.95) !important;
+}
+
+/* ===== CARRUSEL CON IMÁGENES MÁS PEQUEÑAS ===== */
+/* Contenedor del carrusel */
+#carouselCyber {
+    max-height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.1);
+}
+
+/* Imágenes del carrusel - AHORA MÁS PEQUEÑAS */
+.carousel-img {
+    height: 300px; /* Cambiado de 500px a 300px */
+    object-fit: cover;
+    width: 100%;
+    filter: brightness(0.8);
+}
+
+/* Cada slide del carrusel */
+.carousel-item {
+    height: 300px;
+}
+
+/* Textos del carrusel */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    padding: 15px;
+    bottom: 20px;
+    left: 10%;
+    right: 10%;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem; /* Título más pequeño */
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.carousel-caption p {
+    font-size: 0.9rem; /* Texto más pequeño */
+    margin-bottom: 10px;
+}
+
+.carousel-caption .btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+/* Controles del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 10px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: rgba(255, 193, 7, 0.8);
+}
+
+/* Indicadores del carrusel */
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    margin: 0 5px !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding-top: 66px;
+    }
+    
+    /* Carrusel en móviles */
+    #carouselCyber {
+        max-height: 250px;
+    }
+    
+    .carousel-img {
+        height: 250px; /* Más pequeño en móviles */
+    }
+    
+    .carousel-item {
+        height: 250px;
+    }
+    
+    .carousel-caption {
+        padding: 10px;
+        bottom: 10px;
+        left: 5%;
+        right: 5%;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+    
+    .carousel-caption .btn {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+    
+    .display-contador {
+        padding: 20px;
+    }
+    
+    #numeroContador {
+        font-size: 2.5rem !important;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles pequeños) */
+@media (max-width: 576px) {
+    .carousel-img {
+        height: 200px; /* Aún más pequeño */
+    }
+    
+    .carousel-item {
+        height: 200px;
+    }
+    
+    #carouselCyber {
+        max-height: 200px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1rem;
+    }
+    
+    .carousel-caption p {
+        display: none; /* Ocultar texto en móviles muy pequeños */
+    }
+    
+    .carousel-caption .btn {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+    }
+}
+/* Cambia el color de los placeholders a blanco */
+#formContacto input::placeholder,
+#formContacto textarea::placeholder {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* También puedes hacerlo más específico para todos los campos */
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.8) !important;
+    opacity: 1; /* Algunos navegadores reducen la opacidad por defecto */
+}

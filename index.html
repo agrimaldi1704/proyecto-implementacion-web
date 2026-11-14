@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberShield - Seguridad Informática</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-dark text-light">
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-warning fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand text-warning fw-bold fs-3" href="#">
+          <i class="bi bi-shield-shaded me-2"></i>CyberShield
+        </a>
+        <button
+          class="navbar-toggler border-warning"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="#nosotros">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2 bg-dark text-warning border-warning"
+              type="search"
+              placeholder="Buscar..."
+            />
+            <button class="btn btn-outline-warning" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Saludo Dinámico -->
+    <div
+      id="saludoDinamico"
+      class="alert alert-dark text-center mb-0 border-0 rounded-0 border-bottom border-warning"
+    >
+      <div class="container">
+        <h4 class="mb-0 text-warning" id="textoSaludo">Cargando...</h4>
+      </div>
+    </div>
+
+    <!-- Carrusel Mejorado con Imágenes -->
+    <div
+      id="carouselCyber"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+      data-bs-interval="5000"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselCyber"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselCyber"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselCyber"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <!-- Imagen 1: Anonimus.jpg -->
+        <div class="carousel-item active">
+          <img
+            src="Assets/Imagenes/Anonimus.jpg"
+            class="d-block w-100 carousel-img"
+            alt="Hacker con máscara Anonymous - Seguridad informática"
+          />
+          <div class="carousel-caption text-start" data-aos="fade-right">
+            <h5 class="text-warning display-4 fw-bold">Protección Avanzada</h5>
+            <p class="lead">
+              Soluciones de seguridad de última generación para tu empresa
+            </p>
+            <a href="#servicios" class="btn btn-warning btn-lg mt-3">
+              <i class="bi bi-shield-check me-2"></i>Ver Servicios
+            </a>
+          </div>
+        </div>
+
+        <!-- Imagen 2: Codigo fondo negro y letras verdes 2.jpg -->
+        <div class="carousel-item">
+          <img
+            src="Assets/Imagenes/Codigo%20fondo%20negro%20y%20letras%20verdes%202.jpg"
+            class="d-block w-100 carousel-img"
+            alt="Código de programación con tema hacker - Ciberseguridad"
+          />
+          <div class="carousel-caption text-center" data-aos="fade-up">
+            <h5 class="text-warning display-4 fw-bold">Monitoreo 24/7</h5>
+            <p class="lead">
+              Vigilancia continua de tus sistemas con inteligencia artificial
+            </p>
+            <a href="#contacto" class="btn btn-outline-warning btn-lg mt-3">
+              <i class="bi bi-headset me-2"></i>Solicitar Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Imagen 3: Codigo fondo negro y letras verdes.jpg -->
+        <div class="carousel-item">
+          <img
+            src="Assets/Imagenes/Codigo%20fondo%20negro%20y%20letras%20verdes.jpg"
+            class="d-block w-100 carousel-img"
+            alt="Matrix de código binario - Protección de datos"
+          />
+          <div class="carousel-caption text-end" data-aos="fade-left">
+            <h5 class="text-warning display-4 fw-bold">
+              Auditoría de Seguridad
+            </h5>
+            <p class="lead">
+              Identificamos y corregimos vulnerabilidades antes que los
+              atacantes
+            </p>
+            <a href="#contacto" class="btn btn-warning btn-lg mt-3">
+              <i class="bi bi-clipboard-check me-2"></i>Contactar Auditor
+            </a>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselCyber"
+        data-bs-slide="prev"
+      >
+        <span
+          class="carousel-control-prev-icon bg-dark rounded-circle p-3"
+        ></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselCyber"
+        data-bs-slide="next"
+      >
+        <span
+          class="carousel-control-next-icon bg-dark rounded-circle p-3"
+        ></span>
+      </button>
+    </div>
+    <!-- Contenido Principal -->
+<div class="container my-5">
+  <div class="row">
+    <!-- Columna Izquierda -->
+    <div class="col-md-4">
+      <div class="card bg-black border-warning mb-4" data-aos="fade-right">
+        <div class="card-body">
+          <h5 class="card-title text-warning">
+            <i class="bi bi-shield-check me-2"></i>Nuestros Servicios
+          </h5>
+          <ul class="list-unstyled service-list">
+            <li class="mb-2 text-white">🛡️ Firewall Avanzado</li>
+            <li class="mb-2 text-white">🔒 Encriptación de Datos</li>
+            <li class="mb-2 text-white">📊 Auditoría de Red</li>
+            <li class="mb-2 text-white">👨‍💻 Consultoría IT</li>
+            <li class="mb-2 text-white">🚨 Respuesta a Incidentes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="card bg-black border-warning"
+        data-aos="fade-right"
+        data-aos-delay="100"
+      >
+        <div class="card-body">
+          <h5 class="card-title text-warning">
+            <i class="bi bi-bell me-2"></i>Alertas de Seguridad
+          </h5>
+          <div class="alert alert-warning border-warning" role="alert">
+            <i class="bi bi-exclamation-triangle me-2"></i>
+            Nueva vulnerabilidad detectada
+          </div>
+          <div class="alert alert-danger border-danger" role="alert">
+            <i class="bi bi-shield-exclamation me-2"></i>
+            Phishing activo - Extreme precauciones
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Columna Derecha -->
+      <div class="col-md-8">
+        <div class="accordion" id="cyberAccordion" data-aos="fade-left">
+          <div class="accordion-item bg-black border-warning">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button bg-black text-warning"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+              >
+                <i class="bi bi-lock me-2"></i>Protección de Datos
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#cyberAccordion"
+            >
+              <div class="accordion-body text-white">
+                Implementamos soluciones avanzadas de protección de datos para
+                garantizar la confidencialidad e integridad de tu información
+                sensible.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item bg-black border-warning">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed bg-black text-warning"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+              >
+                <i class="bi bi-globe me-2"></i>Seguridad de Red
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#cyberAccordion"
+            >
+              <div class="accordion-body text-white">
+                Protegemos tu infraestructura de red contra amenazas externas
+                e internas con sistemas de detección y prevención de intrusos.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item bg-black border-warning">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed bg-black text-warning"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+              >
+                <i class="bi bi-phone me-2"></i>Seguridad Móvil
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#cyberAccordion"
+            >
+              <div class="accordion-body text-white">
+                Soluciones de seguridad para dispositivos móviles que protegen
+                contra malware, phishing y robo de información.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto" class="py-5 bg-black border-top border-warning">
+      <div class="container">
+        <h2 class="text-center text-warning mb-4" data-aos="fade-down">
+          <i class="bi bi-envelope me-2"></i>Contacto
+        </h2>
+        <p class="text-center text-light mb-5" data-aos="fade-up">
+          Déjanos tus datos y te contactaremos en menos de 24 horas
+        </p>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div
+              class="card bg-dark border-warning shadow-lg"
+              data-aos="zoom-in"
+            >
+              <div class="card-body p-4">
+                <form id="formContacto" class="needs-validation" novalidate>
+                  <!-- Nombre -->
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label text-warning">
+                      <i class="bi bi-person me-2"></i>Nombre Completo *
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control bg-black text-warning border-warning"
+                      id="nombre"
+                      name="nombre"
+                      required
+                      placeholder="Ingresa tu nombre completo"
+                    />
+                    <div class="invalid-feedback">
+                      Por favor, ingresa tu nombre completo.
+                    </div>
+                  </div>
+
+                  <!-- Teléfono -->
+                  <div class="mb-3">
+                    <label for="telefono" class="form-label text-warning">
+                      <i class="bi bi-phone me-2"></i>Teléfono *
+                    </label>
+                    <input
+                      type="tel"
+                      class="form-control bg-black text-warning border-warning"
+                      id="telefono"
+                      name="telefono"
+                      required
+                      pattern="[0-9]{10}"
+                      placeholder="10 dígitos (ej: 5512345678)"
+                    />
+                    <div class="invalid-feedback">
+                      Por favor, ingresa un número de teléfono válido (10
+                      dígitos).
+                    </div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="mb-3">
+                    <label for="email" class="form-label text-warning">
+                      <i class="bi bi-envelope me-2"></i>Correo Electrónico *
+                    </label>
+                    <input
+                      type="email"
+                      class="form-control bg-black text-warning border-warning"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="ejemplo@dominio.com"
+                    />
+                    <div class="invalid-feedback">
+                      Por favor, ingresa un correo electrónico válido.
+                    </div>
+                  </div>
+
+                  <!-- Mensaje -->
+                  <div class="mb-4">
+                    <label for="mensaje" class="form-label text-warning">
+                      <i class="bi bi-chat-text me-2"></i>Mensaje (Opcional)
+                    </label>
+                    <textarea
+                      class="form-control bg-black text-warning border-warning"
+                      id="mensaje"
+                      name="mensaje"
+                      rows="4"
+                      placeholder="¿En qué podemos ayudarte?"
+                    ></textarea>
+                  </div>
+
+                  <!-- Términos -->
+                  <div class="form-check mb-4">
+                    <input
+                      class="form-check-input border-warning"
+                      type="checkbox"
+                      id="terminos"
+                      name="terminos"
+                      required
+                    />
+                    <label class="form-check-label text-light" for="terminos">
+                      Acepto que mis datos sean utilizados para contactarme y
+                      acepto la política de privacidad.
+                    </label>
+                    <div class="invalid-feedback">
+                      Debes aceptar los términos y condiciones.
+                    </div>
+                  </div>
+
+                  <!-- Botones -->
+                  <div class="d-grid gap-2 d-md-flex justify-content-center">
+                    <button type="submit" class="btn btn-warning btn-lg px-4">
+                      <i class="bi bi-send me-2"></i>Enviar Solicitud
+                    </button>
+                    <button
+                      type="reset"
+                      class="btn btn-outline-warning btn-lg px-4"
+                    >
+                      <i class="bi bi-x-circle me-2"></i>Limpiar
+                    </button>
+                  </div>
+                </form>
+
+                <!-- Mensaje de éxito -->
+                <div
+                  id="mensajeExito"
+                  class="alert alert-success mt-4 d-none"
+                  role="alert"
+                >
+                  <h4 class="alert-heading">
+                    <i class="bi bi-check-circle me-2"></i>¡Mensaje enviado!
+                  </h4>
+                  <p>
+                    Gracias por contactarnos. Te responderemos en un máximo de
+                    24 horas.
+                  </p>
+                  <hr />
+                  <p class="mb-0">
+                    <strong
+                      >Revisa la consola del navegador (F12 → Console) para ver
+                      los datos enviados.</strong
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contador Interactivo -->
+    <section id="contador" class="py-5 bg-dark border-top border-warning">
+      <div class="container">
+        <h2 class="text-center text-warning mb-4" data-aos="fade-down">
+          <i class="bi bi-plus-circle me-2"></i>Contador Interactivo
+        </h2>
+        <p class="text-center text-light mb-5" data-aos="fade-up">
+          Haz clic para aumentar el contador de medidas de seguridad
+          implementadas
+        </p>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div
+              class="card bg-black border-warning shadow-lg"
+              data-aos="zoom-in"
+            >
+              <div class="card-body p-4 text-center">
+                <!-- Display del contador -->
+                <div class="display-contador mb-4">
+                  <h2 id="numeroContador" class="display-1 text-warning mb-0">
+                    0
+                  </h2>
+                  <p class="text-light mt-2">Medidas de seguridad activas</p>
+                </div>
+
+                <!-- Botón principal -->
+                <button
+                  id="btnIncrementar"
+                  class="btn btn-warning btn-lg px-5 mb-3"
+                >
+                  <i class="bi bi-plus-circle me-2"></i>Hacer clic para
+                  incrementar
+                </button>
+
+                <!-- Botones adicionales -->
+                <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+                  <button id="btnDisminuir" class="btn btn-outline-warning">
+                    <i class="bi bi-dash-circle me-1"></i>Disminuir
+                  </button>
+
+                  <button id="btnReiniciar" class="btn btn-outline-danger">
+                    <i class="bi bi-arrow-clockwise me-1"></i>Reiniciar
+                  </button>
+
+                  <button id="btnAutomatico" class="btn btn-outline-info">
+                    <i class="bi bi-play-circle me-1"></i>Auto-incrementar
+                  </button>
+                </div>
+
+                <!-- Estadísticas -->
+                <div class="mt-5 pt-4 border-top border-warning">
+                  <h5 class="text-warning mb-3">
+                    <i class="bi bi-graph-up me-2"></i>Estadísticas del Contador
+                  </h5>
+                  <div class="row text-center">
+                    <div class="col-md-4 mb-3">
+                      <div class="p-3 bg-dark rounded">
+                        <h6 class="text-light">Clics Totales</h6>
+                        <p id="clicsTotales" class="text-warning h4 mb-0">0</p>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="p-3 bg-dark rounded">
+                        <h6 class="text-light">Valor Máximo</h6>
+                        <p id="valorMaximo" class="text-warning h4 mb-0">0</p>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="p-3 bg-dark rounded">
+                        <h6 class="text-light">Velocidad</h6>
+                        <p id="velocidad" class="text-warning h4 mb-0">0/s</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Animaciones AOS -->
+    <section
+      id="animaciones-aos"
+      class="py-5 bg-black border-top border-warning"
+    >
+      <div class="container">
+        <h2 class="text-center text-warning mb-5" data-aos="fade-down">
+          <i class="bi bi-magic me-2"></i>Animaciones con Scroll
+        </h2>
+        <p class="text-center text-light mb-5" data-aos="fade-up">
+          Estas animaciones se activan al hacer scroll. Observa cómo aparecen
+          con diferentes efectos.
+        </p>
+
+        <div class="row">
+          <!-- Bloque 1 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div
+              class="card bg-dark border-warning h-100"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
+              <div class="card-body text-center p-4">
+                <div class="display-6 text-warning mb-3">1️⃣</div>
+                <h4 class="text-warning mb-3">Fade Up Lento</h4>
+                <p class="text-light small">
+                  Animación de aparición hacia arriba con duración de 3
+                  segundos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bloque 2 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div
+              class="card bg-dark border-warning h-100"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+            >
+              <div class="card-body text-center p-4">
+                <div class="display-6 text-warning mb-3">2️⃣</div>
+                <h4 class="text-warning mb-3">Top-Bottom</h4>
+                <p class="text-light small">
+                  Se activa cuando el elemento toca el borde inferior de la
+                  ventana.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bloque 3 -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card bg-dark border-warning h-100" data-aos="zoom-in">
+              <div class="card-body text-center p-4">
+                <div class="display-6 text-warning mb-3">3️⃣</div>
+                <h4 class="text-warning mb-3">Zoom In</h4>
+                <p class="text-light small">
+                  Efecto de zoom al aparecer el elemento.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botones de control -->
+        <div class="text-center mt-5">
+          <button
+            id="btnReiniciarAnimaciones"
+            class="btn btn-outline-warning me-3"
+          >
+            <i class="bi bi-arrow-repeat me-1"></i>Reiniciar Animaciones
+          </button>
+          <button id="btnVerCodigo" class="btn btn-outline-info">
+            <i class="bi bi-code-slash me-1"></i>Ver Código de Ejemplo
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-top border-warning py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5 class="text-warning mb-3">
+              <i class="bi bi-shield-shaded me-2"></i>CyberShield
+            </h5>
+            <p class="text-light">Protegiendo tu mundo digital desde 2024</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h6 class="text-warning mb-3">
+              <i class="bi bi-telephone me-2"></i>Contacto
+            </h6>
+            <p class="text-light mb-1">
+              <i class="bi bi-envelope text-warning me-2"></i
+              >freddygrim1704@gmail.com
+            </p>
+            <p class="text-light mb-1">
+              <i class="bi bi-phone text-warning me-2"></i>+52 5579224508
+            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h6 class="text-warning mb-3">
+              <i class="bi bi-people me-2"></i>Síguenos
+            </h6>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-warning">
+                <i class="bi bi-twitter fs-5"></i>
+              </a>
+              <a href="#" class="text-warning">
+                <i class="bi bi-linkedin fs-5"></i>
+              </a>
+              <a href="#" class="text-warning">
+                <i class="bi bi-github fs-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-warning my-3" />
+        <div class="text-center">
+          <p class="text-light mb-0">
+            &copy; 2024 CyberShield. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- JavaScript personalizado -->
+    <script src="script.js"></script>
+  </body>
+</html>
